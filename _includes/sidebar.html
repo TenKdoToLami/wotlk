@@ -1,8 +1,15 @@
+<div id="sidebar-trigger">
+    <div id="sidebar-indicator"></div>
+</div>
+
 <nav class="sidebar">
     <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/guides/' | relative_url }}">Guides</a></li>
-        <li><a href="{{ '/roster/' | relative_url }}">Roster</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+        <li><a href="{{ '/' | relative_url }}" {% if page.url=='/' %}class="active" {% endif %}>Home</a></li>
+        <li><a href="{{ '/guides/' | relative_url }}" {% if page.url contains '/guides/' %}class="active" {% endif
+                %}>Guides</a></li>
+        <li><a href="{{ '/roster/' | relative_url }}" {% if page.url contains '/roster/' %}class="active" {% endif
+                %}>Roster</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact/' %}class="active" {% endif
+                %}>Contact</a></li>
     </ul>
 </nav>

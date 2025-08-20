@@ -1,37 +1,129 @@
+/* ===========================
+   SIDEBAR CONTAINER
+   =========================== */
 .sidebar {
   position: fixed;
   top: 0;
   left: -200px;
   width: 200px;
   height: 100%;
-  background: rgba(0, 0, 0, 0.75);
+
+  /* Frosted glass background */
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  /* Animation for sliding */
   transition: left 0.3s ease-in-out;
-  padding-top: 50px;
+
+  /* Center content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Border and inner glow */
+  border-right: 1px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2) inset;
+
   z-index: 999;
 }
 
+
+/* ===========================
+   SIDEBAR LIST
+   =========================== */
 .sidebar ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .sidebar li {
   margin: 20px 0;
-  text-align: center;
 }
 
+
+/* ===========================
+   SIDEBAR LINKS
+   =========================== */
 .sidebar a {
   color: #fff;
   text-decoration: none;
   font-size: 1.2em;
-  transition: color 0.2s ease;
+  display: block;
+  padding: 10px;
+  border-radius: 6px; /* rounded hover outline */
+  transition: color 0.2s ease,
+              text-shadow 0.2s ease,
+              box-shadow 0.2s ease;
 }
 
+/* Hover effect */
 .sidebar a:hover {
   color: #00bcd4;
+  text-shadow: 0 0 8px #00bcd4;
+  box-shadow: 0 0 10px #00bcd4,
+              0 0 20px #0099ff inset; /* glowing outline */
 }
 
-body:hover .sidebar {
+/* Active (current page) */
+.sidebar a.active {
+  color: #00ffff;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ffff,
+               0 0 20px #0099ff;
+}
+
+
+/* ===========================
+   SIDEBAR TRIGGER
+   =========================== */
+#sidebar-trigger {
+  position: fixed;
+  top: 0;
   left: 0;
+  width: 60px;   /* trigger area size */
+  height: 100%;
+  z-index: 1000;
+}
+
+
+/* ===========================
+   INDICATOR LINE
+   =========================== */
+#sidebar-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 100%;
+
+  background: linear-gradient(to bottom, #00f, #0ff);
+  box-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+
+  opacity: 0.6;
+  animation: pulse 2s infinite alternate;
+}
+
+/* Glowing pulse animation */
+@keyframes pulse {
+  from {
+    opacity: 0.4;
+    box-shadow: 0 0 8px #0ff, 0 0 16px #00f;
+  }
+  to {
+    opacity: 0.8;
+    box-shadow: 0 0 14px #0ff, 0 0 28px #00f;
+  }
+}
+
+
+/* ===========================
+   HOVER LOGIC
+   =========================== */
+#sidebar-trigger:hover ~ .sidebar,
+.sidebar:hover {
+  left: 0; /* slide in */
 }

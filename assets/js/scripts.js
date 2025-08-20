@@ -9,5 +9,5 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => particle.remove(), 15000);
   };
 
-  setInterval(createParticle, 600);
+  setInterval(createParticle, 60);
 });
