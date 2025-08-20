@@ -1,38 +1,138 @@
 body {
     margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #111);
-    color: #f0f0f0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(circle at top, #0a0a12, #050509, #000);
+    color: #f0f0f0;
+    overflow-x: hidden;
 }
 
 .landing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    min-height: 100vh;
+    padding-left: 20px;
+    box-sizing: border-box;
+    animation: fadeIn 2s ease-in;
 }
 
-.line1 {
-    font-size: 3.5rem;
+.landing-container h1 {
+    font-size: 3.8rem;
     font-weight: bold;
-    letter-spacing: 2px;
-    color: #e6e6e6;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    letter-spacing: 3px;
+    color: #d6f1ff;
+    text-shadow: 0 0 15px #57c5ff, 0 0 30px #009dff, 0 0 45px #00e1ff;
+    animation: frostPulse 3s infinite alternate, flicker 4s infinite;
+    margin: 0.2em 0;
 }
 
-.line2 {
-    font-size: 2.2rem;
-    margin: 10px 0;
+.landing-container h2 {
+    font-size: 2.3rem;
+    margin: 0.2em 0;
     font-weight: 400;
-    color: #cfcfcf;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    color: #b8d9f7;
+    text-shadow: 0 0 10px rgba(120, 200, 255, 0.3);
+    opacity: 0;
+    animation: fadeSlide 2s ease forwards;
+    animation-delay: 1s;
 }
 
-.line3 {
-    font-size: 1.5rem;
+.landing-container h3 {
+    font-size: 1.6rem;
     font-weight: 300;
-    color: #999;
+    color: #8fb3d9;
     font-style: italic;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
+    text-shadow: 0 0 5px rgba(120, 200, 255, 0.2);
+    display: inline-block;
+    background: linear-gradient(90deg, #8fb3d9, #ffffff, #8fb3d9);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 5s linear infinite;
+    margin: 0.2em 0;
+}
+
+@keyframes frostPulse {
+    0% {
+        text-shadow: 0 0 15px #57c5ff, 0 0 25px #009dff;
+    }
+
+    100% {
+        text-shadow: 0 0 30px #00e1ff, 0 0 50px #57c5ff;
+    }
+}
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 200% center;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.frost-particle {
+    position: fixed;
+    top: -10px;
+    width: 6px;
+    height: 6px;
+    background: rgba(180, 220, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(120, 200, 255, 0.8);
+    animation: fall linear forwards;
+    pointer-events: none;
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
 }

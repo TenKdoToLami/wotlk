@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const lines = document.querySelectorAll(".landing-container h1, .landing-container h2, .landing-container h3");
+  const createParticle = () => {
+    const particle = document.createElement("div");
+    particle.classList.add("frost-particle");
+    particle.style.left = Math.random() * 100 + "vw";
+    particle.style.animationDuration = 8 + Math.random() * 5 + "s";
+    document.body.appendChild(particle);
 
-    lines.forEach((line, i) => {
-        line.style.opacity = 0;
-        line.style.transform = "translateY(20px)";
-        setTimeout(() => {
-            line.style.transition = "all 0.8s ease";
-            line.style.opacity = 1;
-            line.style.transform = "translateY(0)";
-        }, i * 600);
-    });
+    setTimeout(() => particle.remove(), 15000);
+  };
+
+  setInterval(createParticle, 600);
 });

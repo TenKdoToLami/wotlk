@@ -1,0 +1,37 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  transition: left 0.3s ease-in-out;
+  padding-top: 50px;
+  z-index: 999;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: #00bcd4;
+}
+
+body:hover .sidebar {
+  left: 0;
+}
