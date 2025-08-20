@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #111);
+    color: #f0f0f0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.landing-container {
+    text-align: center;
+}
+
+.line1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #e6e6e6;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.line2 {
+    font-size: 2.2rem;
+    margin: 10px 0;
+    font-weight: 400;
+    color: #cfcfcf;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.line3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #999;
+    font-style: italic;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.15);
+}
