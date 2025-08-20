@@ -136,3 +136,18 @@ body {
         opacity: 0;
     }
 }
+
+
+section {
+    min-height: 100vh;
+    padding: 60px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+section + section {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
