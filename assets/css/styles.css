@@ -1,3 +1,6 @@
+/* ==========================================
+   GLOBAL STYLES
+   ========================================== */
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -6,19 +9,24 @@ body {
     overflow-x: hidden;
 }
 
-.landing-container {
+/* ==========================================
+   HEADER SECTION
+   ========================================== */
+#Header {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    min-height: 100vh;
     padding-left: 20px;
     box-sizing: border-box;
     animation: fadeIn 2s ease-in;
+    margin-top: -50px;
 }
 
-.landing-container h1 {
+#Header h1 {
     font-size: 3.8rem;
     font-weight: bold;
     letter-spacing: 3px;
@@ -28,7 +36,7 @@ body {
     margin: 0.2em 0;
 }
 
-.landing-container h2 {
+#Header h2 {
     font-size: 2.3rem;
     margin: 0.2em 0;
     font-weight: 400;
@@ -39,7 +47,7 @@ body {
     animation-delay: 1s;
 }
 
-.landing-container h3 {
+#Header h3 {
     font-size: 1.6rem;
     font-weight: 300;
     color: #8fb3d9;
@@ -54,90 +62,9 @@ body {
     margin: 0.2em 0;
 }
 
-@keyframes frostPulse {
-    0% {
-        text-shadow: 0 0 15px #57c5ff, 0 0 25px #009dff;
-    }
-
-    100% {
-        text-shadow: 0 0 30px #00e1ff, 0 0 50px #57c5ff;
-    }
-}
-
-@keyframes flicker {
-
-    0%,
-    18%,
-    22%,
-    25%,
-    53%,
-    57%,
-    100% {
-        opacity: 1;
-    }
-
-    20%,
-    24%,
-    55% {
-        opacity: 0.6;
-    }
-}
-
-@keyframes fadeSlide {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes shimmer {
-    to {
-        background-position: 200% center;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.frost-particle {
-    position: fixed;
-    top: -10px;
-    width: 6px;
-    height: 6px;
-    background: rgba(180, 220, 255, 0.8);
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(120, 200, 255, 0.8);
-    animation: fall linear forwards;
-    pointer-events: none;
-}
-
-@keyframes fall {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    to {
-        transform: translateY(110vh);
-        opacity: 0;
-    }
-}
-
-
+/* ==========================================
+   SECTIONS
+   ========================================== */
 section {
     min-height: 100vh;
     padding: 60px 50px;
@@ -147,7 +74,81 @@ section {
     justify-content: center;
 }
 
-
 section + section {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Headings inside sections */
+section h1,
+section h2,
+section h3 {
+    margin: 0.5em 0;
+    color: #e0e0e0;
+    text-shadow: 0 0 8px rgba(120, 200, 255, 0.2);
+}
+
+/* ==========================================
+   LAYOUT
+   ========================================== */
+main {
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+    margin-left: 240px;
+    margin-right: 240px;
+}
+
+main section {
+    margin: 60px 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ==========================================
+   PARTICLES EFFECTS
+   ========================================== */
+.frost-particle {
+    position: fixed;
+    top: -10px;
+    width: 6px;
+    height: 6px;
+    background: rgba(180, 220, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(120, 200, 255, 0.8);
+    animation: fall linear forwards;
+    pointer-events: none; /* doesn’t block clicks */
+}
+
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
+@keyframes frostPulse {
+    0%   { text-shadow: 0 0 15px #57c5ff, 0 0 25px #009dff; }
+    100% { text-shadow: 0 0 30px #00e1ff, 0 0 50px #57c5ff; }
+}
+
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
+    20%, 24%, 55% { opacity: 0.6; }
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+    to { background-position: 200% center; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fall {
+    from { transform: translateY(0); opacity: 1; }
+    to   { transform: translateY(110vh); opacity: 0; }
 }
