@@ -18,4 +18,20 @@ sections:
   - id: About5
     content: |
       Even more lorem ipsum with another section...
+  - id: Tiles
+    content: |
+      <a class="tile" href="/page1">
+        <img src="/assets/images/header-background.webp" alt="Tile 1">
+        <div class="tile-content">
+          <h3>Tile 1</h3>
+          <p>Go to Page 1</p>
+        </div>
+      </a>
+      <a class="tile" href="/page2">
+        <img src="/assets/images/header-background.webp" alt="Tile 2">
+        <div class="tile-content">
+          <h3>Tile 2</h3>
+          <p>Go to Page 2</p>
+        </div>
+      </a>
 ---

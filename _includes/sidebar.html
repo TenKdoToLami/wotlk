@@ -5,11 +5,13 @@
 <nav class="sidebar">
     <ul>
         <li><a href="{{ '/' | relative_url }}" {% if page.url=='/' %}class="active" {% endif %}>Home</a></li>
-        <li><a href="{{ '/guides/' | relative_url }}" {% if page.url contains '/guides/' %}class="active" {% endif
-                %}>Guides</a></li>
-        <li><a href="{{ '/roster/' | relative_url }}" {% if page.url contains '/roster/' %}class="active" {% endif
-                %}>Roster</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact/' %}class="active" {% endif
-                %}>Contact</a></li>
+        <li><a href="{{ '/classes/' | relative_url }}" {% if page.url contains '/classes/' %}class="active" {% endif
+                %}>Classes</a></li>
+        <li><a href="{{ '/raids/' | relative_url }}" {% if page.url contains '/raids/' %}class="active" {% endif
+                %}>Raids</a></li>
+        <li><a href="{{ '/data/' | relative_url }}" {% if page.url contains '/data/' %}class="active" {% endif
+                %}>Data</a></li>
+        <li><a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}class="active" {% endif
+                %}>About</a></li>
     </ul>
 </nav>
