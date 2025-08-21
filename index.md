@@ -1,7 +1,7 @@
 ---
 layout: landing
 title: Eternal Slackers
-header_image: /assets/images/header-background.jpg
+header_image: /assets/images/dde47b8f-67a0-411b-ad6d-e9b32e99eb3e.png
 sections:
   - id: Header
     content: |
