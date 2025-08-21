@@ -13,18 +13,60 @@ body {
    HEADER SECTION
    ========================================== */
 #Header {
+    position: relative;
     width: 100%;
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-left: 20px;
-    box-sizing: border-box;
-    animation: fadeIn 2s ease-in;
-    margin-top: -50px;
+    overflow: hidden;
 }
+
+/* Background stays behind text */
+#HeaderBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    /* behind text */
+    overflow: hidden;
+}
+
+#HeaderBackground::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+
+    /* gradual gradient from transparent to dark */
+    background: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.1) 50%,
+            rgba(0, 0, 0, 0.25) 75%,
+            rgba(0, 0, 0, 0.5) 90%,
+            rgba(10, 10, 18, 1) 100%);
+
+    backdrop-filter: blur(0px);
+    box-shadow: inset 0 -50px 50px rgba(0, 0, 0, 0.3);
+}
+
+.HeaderContent {
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding: 0 20px;
+}
+
 
 #Header h1 {
     font-size: 3.8rem;
@@ -74,7 +116,7 @@ section {
     justify-content: center;
 }
 
-section + section {
+section+section {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -118,37 +160,81 @@ main section {
     border-radius: 50%;
     box-shadow: 0 0 10px rgba(120, 200, 255, 0.8);
     animation: fall linear forwards;
-    pointer-events: none; /* doesn’t block clicks */
+    pointer-events: none;
+    /* doesn’t block clicks */
+    z-index: 0;
 }
 
 /* ==========================================
    ANIMATIONS
    ========================================== */
 @keyframes frostPulse {
-    0%   { text-shadow: 0 0 15px #57c5ff, 0 0 25px #009dff; }
-    100% { text-shadow: 0 0 30px #00e1ff, 0 0 50px #57c5ff; }
+    0% {
+        text-shadow: 0 0 15px #57c5ff, 0 0 25px #009dff;
+    }
+
+    100% {
+        text-shadow: 0 0 30px #00e1ff, 0 0 50px #57c5ff;
+    }
 }
 
 @keyframes flicker {
-    0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
-    20%, 24%, 55% { opacity: 0.6; }
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.6;
+    }
 }
 
 @keyframes fadeSlide {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes shimmer {
-    to { background-position: 200% center; }
+    to {
+        background-position: 200% center;
+    }
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to   { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes fall {
-    from { transform: translateY(0); opacity: 1; }
-    to   { transform: translateY(110vh); opacity: 0; }
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateY(110vh);
+        opacity: 0;
+    }
 }

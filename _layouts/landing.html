@@ -13,21 +13,33 @@
     <script src="{{ '/assets/js/section-navigation.js' | relative_url }}" defer></script>
 </head>
 
-<body>
+<body class="{% if page.header_image %}has-header-bg{% endif %}">
     {% include sidebar.html %}
     {% include section-navigation.html %}
+
+    {% assign start_index = 0 %}
+    {% if page.header_image and page.sections and page.sections.size > 0 %}
+    {% assign start_index = 1 %}
+    <section id="Header">
+        <div id="HeaderBackground" style="background-image: url('{{ page.header_image | relative_url }}');"></div>
+        <div class="HeaderContent">
+            {{ page.sections[0].content | markdownify }}
+        </div>
+    </section>
+    {% endif %}
 
     <main>
         {% if page.sections %}
         {% for section in page.sections %}
+        {% if forloop.index0 >= start_index %}
         <section id="{{ section.id }}">
             {{ section.content | markdownify }}
         </section>
+        {% endif %}
         {% endfor %}
-        {% else %}
-        {{ content }} <!-- fallback for normal markdown pages -->
         {% endif %}
     </main>
+
 
     {% include footer.html %}
 </body>
