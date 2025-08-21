@@ -1,3 +1,5 @@
+@import "theme-colors";
+
 /* ===========================
    SIDEBAR CONTAINER
    =========================== */
@@ -8,26 +10,21 @@
   width: 200px;
   height: 100%;
 
-  /* Frosted glass background */
-  background: rgba(0, 0, 0, 0.2);
+  background: $color-sidebar-bg;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
 
-  /* Animation for sliding */
   transition: left 0.3s ease-in-out;
 
-  /* Center content */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* Border and inner glow */
-  border-right: 1px solid rgba(0, 255, 255, 0.3);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2) inset;
+  border-right: 1px solid $color-sidebar-border;
+  box-shadow: 0 0 20px rgba($color-accent, 0.2) inset;
 
   z-index: 999;
 }
-
 
 /* ===========================
    SIDEBAR LIST
@@ -44,17 +41,16 @@
   margin: 20px 0;
 }
 
-
 /* ===========================
    SIDEBAR LINKS
    =========================== */
 .sidebar a {
-  color: #fff;
+  color: $color-text-white;
   text-decoration: none;
   font-size: 1.2em;
   display: block;
   padding: 10px;
-  border-radius: 6px; /* rounded hover outline */
+  border-radius: 6px;
   transition: color 0.2s ease,
               text-shadow 0.2s ease,
               box-shadow 0.2s ease;
@@ -62,20 +58,19 @@
 
 /* Hover effect */
 .sidebar a:hover {
-  color: #00bcd4;
-  text-shadow: 0 0 8px #00bcd4;
-  box-shadow: 0 0 10px #00bcd4,
-              0 0 20px #0099ff inset; /* glowing outline */
+  color: $color-accent-alt;
+  text-shadow: 0 0 8px $color-accent-alt;
+  box-shadow: 0 0 10px $color-accent-alt,
+              0 0 20px $color-accent-dark inset;
 }
 
 /* Active (current page) */
 .sidebar a.active {
-  color: #00ffff;
+  color: $color-accent;
   font-weight: bold;
-  text-shadow: 0 0 10px #00ffff,
-               0 0 20px #0099ff;
+  text-shadow: 0 0 10px $color-accent,
+               0 0 20px $color-accent-dark;
 }
-
 
 /* ===========================
    SIDEBAR TRIGGER
@@ -84,11 +79,10 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 60px;   /* trigger area size */
+  width: 60px;
   height: 100%;
   z-index: 1000;
 }
-
 
 /* ===========================
    INDICATOR LINE
@@ -100,8 +94,8 @@
   width: 10px;
   height: 100%;
 
-  background: linear-gradient(to bottom, #00f, #0ff);
-  box-shadow: 0 0 10px #0ff, 0 0 20px #00f;
+  background: linear-gradient(to bottom, $color-primary-dark, $color-accent);
+  box-shadow: 0 0 10px $color-accent, 0 0 20px $color-primary-dark;
 
   opacity: 0.6;
   animation: pulse 2s infinite alternate;
@@ -111,14 +105,13 @@
 @keyframes pulse {
   from {
     opacity: 0.4;
-    box-shadow: 0 0 8px #0ff, 0 0 16px #00f;
+    box-shadow: 0 0 8px $color-accent, 0 0 16px $color-primary-dark;
   }
   to {
     opacity: 0.8;
-    box-shadow: 0 0 14px #0ff, 0 0 28px #00f;
+    box-shadow: 0 0 14px $color-accent, 0 0 28px $color-primary-dark;
   }
 }
-
 
 /* ===========================
    HOVER LOGIC

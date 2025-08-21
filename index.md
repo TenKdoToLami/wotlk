@@ -6,7 +6,7 @@ sections:
   - id: Header
     content: |
       # How to WoWMania
-      ## By Za
+      ## By Slacking Za
       ### Eternal Slackers
   - id: About
     content: |

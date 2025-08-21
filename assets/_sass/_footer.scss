@@ -1,9 +1,17 @@
-.site-footer {
-    bottom: 0;
-    left: 0;
-    width: 100%;
+@import "theme-colors";
 
-    background: rgba(0, 0, 0, 0.2);
+/* Reset page margins */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ===============================
+   SITE FOOTER
+   =============================== */
+.site-footer {
+    width: 100%;
+    background: $color-footer-bg;
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
 
@@ -11,8 +19,10 @@
     justify-content: space-between;
     padding: 10px 20px;
     font-size: 0.9em;
-    color: #fff;
+    color: $color-footer-text;
     z-index: 1000;
+
+    position: sticky;
 }
 
 .footer-div {
@@ -24,7 +34,7 @@
 
 .footer-div span {
     margin-right: 15px;
-    color: #ccc;
+    color: $color-footer-text-muted;
     font-size: 0.9em;
 }
 
@@ -46,6 +56,6 @@
 }
 
 .social-icon:hover img {
-    filter: brightness(1) drop-shadow(0 0 4px #00ffff);
+    filter: brightness(1) drop-shadow(0 0 4px $color-accent);
     transform: scale(1.1);
 }

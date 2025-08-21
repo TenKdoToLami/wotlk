@@ -1,11 +1,20 @@
+---
+
+---
+
+@import "theme-colors";
+@import "footer";
+@import "section-navigation";
+@import "sidebar";
+
 /* ==========================================
    GLOBAL STYLES
    ========================================== */
 body {
     margin: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: radial-gradient(circle at top, #0a0a12, #050509, #000);
-    color: #f0f0f0;
+    background: $color-bg-black;
+    color: $color-text-light;
     overflow-x: hidden;
 }
 
@@ -50,20 +59,20 @@ body {
 
     /* gradual gradient from transparent to dark */
     background: linear-gradient(to bottom,
-            rgba(0, 0, 0, 0) 0%,
-            rgba(0, 0, 0, 0.1) 50%,
-            rgba(0, 0, 0, 0.25) 75%,
-            rgba(0, 0, 0, 0.5) 90%,
-            rgba(10, 10, 18, 1) 100%);
+            rgba($color-bg-black, 0) 0%,
+            rgba($color-bg-black, 0.1) 50%,
+            rgba($color-bg-black, 0.25) 75%,
+            rgba($color-bg-black, 0.5) 90%,
+            rgba($color-bg-black, 1) 100%);
 
     backdrop-filter: blur(0px);
-    box-shadow: inset 0 -50px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 -50px 50px rgba($color-bg-black, 0.3);
 }
 
 .HeaderContent {
     position: relative;
     z-index: 1;
-    color: white;
+    color: $color-text-white;
     padding: 0 20px;
 }
 
@@ -72,37 +81,33 @@ body {
     font-size: 3.8rem;
     font-weight: bold;
     letter-spacing: 3px;
-    color: #d6f1ff;
-    text-shadow: 0 0 15px #57c5ff, 0 0 30px #009dff, 0 0 45px #00e1ff;
-    animation: frostPulse 3s infinite alternate, flicker 4s infinite;
+    color: $color-text-light;
+    text-shadow: 0 0 15px $color-primary, 0 0 30px $color-primary-dark, 0 0 45px $color-primary-bright;
+    animation: frostPulse 2s infinite alternate, flicker 3s infinite;
     margin: 0.2em 0;
 }
 
-#Header h2 {
-    font-size: 2.3rem;
-    margin: 0.2em 0;
-    font-weight: 400;
-    color: #b8d9f7;
-    text-shadow: 0 0 10px rgba(120, 200, 255, 0.3);
-    opacity: 0;
-    animation: fadeSlide 2s ease forwards;
-    animation-delay: 1s;
-}
-
+#Header h2 ,
 #Header h3 {
-    font-size: 1.6rem;
+    font-size: 2.1rem;
     font-weight: 300;
-    color: #8fb3d9;
     font-style: italic;
-    text-shadow: 0 0 5px rgba(120, 200, 255, 0.2);
-    display: inline-block;
-    background: linear-gradient(90deg, #8fb3d9, #ffffff, #8fb3d9);
+    display: block;
+    color: $color-primary;
+    background: linear-gradient(
+        90deg,
+        $color-text-light,
+        $color-primary-bright,
+        $color-text-light
+    );
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: shimmer 5s linear infinite;
+    text-shadow: 0 0 5px rgba($color-primary, 0.5);
+    animation: shimmer 2s linear infinite;
     margin: 0.2em 0;
 }
+
 
 /* ==========================================
    SECTIONS
@@ -116,17 +121,13 @@ section {
     justify-content: center;
 }
 
-section+section {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
 /* Headings inside sections */
 section h1,
 section h2,
 section h3 {
     margin: 0.5em 0;
-    color: #e0e0e0;
-    text-shadow: 0 0 8px rgba(120, 200, 255, 0.2);
+    color: $color-primary;
+    text-shadow: 0 0 8px rgba($color-primary-dark, 0.2);
 }
 
 /* ==========================================
@@ -156,9 +157,9 @@ main section {
     top: -10px;
     width: 6px;
     height: 6px;
-    background: rgba(180, 220, 255, 0.8);
+    background: rgba($color-accent-alt, 0.8);
     border-radius: 50%;
-    box-shadow: 0 0 10px rgba(120, 200, 255, 0.8);
+    box-shadow: 0 0 10px rgba($color-primary-dark, 0.8);
     animation: fall linear forwards;
     pointer-events: none;
     /* doesn’t block clicks */
@@ -197,35 +198,16 @@ main section {
     }
 }
 
-@keyframes fadeSlide {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 @keyframes shimmer {
-    to {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
         background-position: 200% center;
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 
 @keyframes fall {
     from {
