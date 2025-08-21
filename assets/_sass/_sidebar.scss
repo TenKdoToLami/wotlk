@@ -4,119 +4,121 @@
    SIDEBAR CONTAINER
    =========================== */
 .sidebar {
-  position: fixed;
-  top: 0;
-  left: -200px;
-  width: 200px;
-  height: 100%;
+	position: fixed;
+	top: 0;
+	left: -200px;
+	width: 200px;
+	height: 100%;
 
-  background: $color-sidebar-bg;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+	background: $color-sidebar-bg;
+	backdrop-filter: blur(2px);
+	-webkit-backdrop-filter: blur(2px);
 
-  transition: left 0.3s ease-in-out;
+	transition: left 0.3s ease-in-out;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  border-right: 1px solid $color-sidebar-border;
-  box-shadow: 0 0 20px rgba($color-accent, 0.2) inset;
+	border-right: 1px solid $color-sidebar-border;
+	box-shadow: 0 0 20px rgba($color-accent, 0.2) inset;
 
-  z-index: 999;
+	z-index: 999;
 }
 
 /* ===========================
    SIDEBAR LIST
    =========================== */
 .sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  width: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	width: 100%;
 }
 
 .sidebar li {
-  margin: 20px 0;
+	margin: 20px 0;
 }
 
 /* ===========================
    SIDEBAR LINKS
    =========================== */
 .sidebar a {
-  color: $color-text-white;
-  text-decoration: none;
-  font-size: 1.2em;
-  display: block;
-  padding: 10px;
-  border-radius: 6px;
-  transition: color 0.2s ease,
-              text-shadow 0.2s ease,
-              box-shadow 0.2s ease;
+	color: $color-text-white;
+	text-decoration: none;
+	font-size: 1.2em;
+	display: block;
+	padding: 10px;
+	border-radius: 6px;
+	transition: color 0.2s ease,
+		text-shadow 0.2s ease,
+		box-shadow 0.2s ease;
 }
 
 /* Hover effect */
 .sidebar a:hover {
-  color: $color-accent-alt;
-  text-shadow: 0 0 8px $color-accent-alt;
-  box-shadow: 0 0 10px $color-accent-alt,
-              0 0 20px $color-accent-dark inset;
+	color: $color-accent-alt;
+	text-shadow: 0 0 8px $color-accent-alt;
+	box-shadow: 0 0 10px $color-accent-alt,
+		0 0 20px $color-accent-dark inset;
 }
 
 /* Active (current page) */
 .sidebar a.active {
-  color: $color-accent;
-  font-weight: bold;
-  text-shadow: 0 0 10px $color-accent,
-               0 0 20px $color-accent-dark;
+	color: $color-accent;
+	font-weight: bold;
+	text-shadow: 0 0 10px $color-accent,
+		0 0 20px $color-accent-dark;
 }
 
 /* ===========================
    SIDEBAR TRIGGER
    =========================== */
 #sidebar-trigger {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 60px;
-  height: 100%;
-  z-index: 1000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 60px;
+	height: 100%;
+	z-index: 1000;
 }
 
 /* ===========================
    INDICATOR LINE
    =========================== */
 #sidebar-indicator {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 10px;
-  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10px;
+	height: 100%;
 
-  background: linear-gradient(to bottom, $color-primary-dark, $color-accent);
-  box-shadow: 0 0 10px $color-accent, 0 0 20px $color-primary-dark;
+	background: linear-gradient(to bottom, $color-primary-dark, $color-accent);
+	box-shadow: 0 0 10px $color-accent, 0 0 20px $color-primary-dark;
 
-  opacity: 0.6;
-  animation: pulse 2s infinite alternate;
+	opacity: 0.6;
+	animation: pulse 2s infinite alternate;
 }
 
 /* Glowing pulse animation */
 @keyframes pulse {
-  from {
-    opacity: 0.4;
-    box-shadow: 0 0 8px $color-accent, 0 0 16px $color-primary-dark;
-  }
-  to {
-    opacity: 0.8;
-    box-shadow: 0 0 14px $color-accent, 0 0 28px $color-primary-dark;
-  }
+	from {
+		opacity: 0.4;
+		box-shadow: 0 0 8px $color-accent, 0 0 16px $color-primary-dark;
+	}
+
+	to {
+		opacity: 0.8;
+		box-shadow: 0 0 14px $color-accent, 0 0 28px $color-primary-dark;
+	}
 }
 
 /* ===========================
    HOVER LOGIC
    =========================== */
-#sidebar-trigger:hover ~ .sidebar,
+#sidebar-trigger:hover~.sidebar,
 .sidebar:hover {
-  left: 0; /* slide in */
+	left: 0;
+	/* slide in */
 }
