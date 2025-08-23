@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 		link.addEventListener("click", e => {
 			e.preventDefault();
-			section.scrollIntoView({ behavior: "smooth", block: "center" });
+			section.scrollIntoView({ behavior: "smooth", block: "start" });
 		});
 
 		li.appendChild(link);
