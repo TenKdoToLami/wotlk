@@ -30,12 +30,19 @@
         {% for section in page.sections %}
         {% if forloop.index0 >= start_index %}
         <section id="{{ section.id }}">
+            {% if section.tiles %}
+            {% include tiles.html %}
+            {% else %}
             {{ section.content | markdownify }}
+            {% endif %}
         </section>
         {% endif %}
         {% endfor %}
         {% endif %}
     </main>
+
+
+
 
 
     {% include footer.html %}

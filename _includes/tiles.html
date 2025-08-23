@@ -1,0 +1,9 @@
+{% comment %} tiles.html {% endcomment %}
+{% for tile in section.tiles %}
+<a class="tile" href="{{ tile.url }}" style="--bg:url('{{ tile.img | relative_url }}')">
+	<div class="tile-content">
+		<h3>{{ tile.title }}</h3>
+		<p>{{ tile.desc }}</p>
+	</div>
+</a>
+{% endfor %}

@@ -8,6 +8,29 @@ sections:
       # How to WoWMania
       ## By Slacking Za
       ### Eternal Slackers
+  - id: Tiles
+    tiles:
+      - title: "Raids"
+        desc: "Go to Page 1"
+        url: "raids"
+        img: "/assets/images/header-background.webp"
+      - title: "Classes"
+        desc: "Go to Page 2"
+        url: "classes"
+        img: "/assets/images/header-background.webp"
+      - title: "Classes"
+        desc: "Go to Page 2"
+        url: "classes"
+        img: "/assets/images/header-background.webp"
+      - title: "Classes"
+        desc: "Go to Page 2"
+        url: "classes"
+        img: "/assets/images/header-background.webp"
+      - title: "Classes"
+        desc: "Go to Page 2"
+        url: "classes"
+        img: "/assets/images/header-background.webp"
+
   - id: About
     content: |
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus ac leo pretium faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Donec iaculis gravida nulla. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Quisque porta. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Aliquam erat volutpat. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Maecenas aliquet accumsan leo. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.
@@ -18,20 +41,4 @@ sections:
   - id: About5
     content: |
       Even more lorem ipsum with another section...
-  - id: Tiles
-    content: |
-      <a class="tile" href="/page1">
-        <img src="/assets/images/header-background.webp" alt="Tile 1">
-        <div class="tile-content">
-          <h3>Tile 1</h3>
-          <p>Go to Page 1</p>
-        </div>
-      </a>
-      <a class="tile" href="/page2">
-        <img src="/assets/images/header-background.webp" alt="Tile 2">
-        <div class="tile-content">
-          <h3>Tile 2</h3>
-          <p>Go to Page 2</p>
-        </div>
-      </a>
 ---
