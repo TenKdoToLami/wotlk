@@ -2,3 +2,5 @@ baseurl: "/wotlk"
 sass:
   sass_dir: assets/_sass
   style: compressed
+include:
+  - favicon.ico
