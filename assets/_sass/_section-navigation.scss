@@ -39,11 +39,13 @@
 	opacity: 0.5;
 	transition: all 0.2s ease;
 	position: relative;
+	transform: scale(1);
 }
 
 .section-nav a:hover {
 	opacity: 1;
 	text-shadow: 0 0 6px $color-primary, 0 0 12px $color-primary-bright;
+	transform: scale(1.1);
 }
 
 .section-nav a.active {
@@ -51,6 +53,7 @@
 	font-weight: bold;
 	text-shadow: 0 0 10px $color-primary, 0 0 20px $color-primary-bright;
 	background: $color-section-nav-active-bg;
+	transform: scale(1.1);
 }
 
 .section-nav a.active::before {
