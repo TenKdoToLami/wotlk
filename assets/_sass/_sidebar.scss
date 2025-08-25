@@ -20,9 +20,6 @@
 	justify-content: center;
 	align-items: center;
 
-	border-right: 1px solid $color-sidebar-border;
-	box-shadow: 0 0 20px rgba($color-accent, 0.2) inset;
-
 	z-index: 999;
 }
 
@@ -52,73 +49,78 @@
 	padding: 10px;
 	border-radius: 6px;
 	transition: color 0.2s ease,
-		text-shadow 0.2s ease,
-		box-shadow 0.2s ease;
+		text-shadow 0.2s ease;
 }
 
-/* Hover effect */
 .sidebar a:hover {
 	color: $color-accent-alt;
 	text-shadow: 0 0 8px $color-accent-alt;
-	box-shadow: 0 0 10px $color-accent-alt,
-		0 0 20px $color-accent-dark inset;
 }
 
-/* Active (current page) */
 .sidebar a.active {
 	color: $color-accent;
 	font-weight: bold;
-	text-shadow: 0 0 10px $color-accent,
-		0 0 20px $color-accent-dark;
+	text-shadow: 0 0 10px $color-accent;
 }
 
 /* ===========================
-   SIDEBAR TRIGGER
+   SIDEBAR TRIGGER AREA
    =========================== */
 #sidebar-trigger {
 	position: fixed;
 	top: 0;
-	left: 0;
-	width: 60px;
+	left: 8px;
+	width: 32px;              /* wider to just be clickable, no line */
 	height: 100%;
+	cursor: pointer;
+	background: transparent;
 	z-index: 1000;
 }
 
 /* ===========================
-   INDICATOR LINE
+   ARROW ONLY
    =========================== */
 #sidebar-indicator {
 	position: absolute;
-	top: 0;
+	top: 50%;
 	left: 0;
-	width: 10px;
-	height: 100%;
+	transform: translateY(-50%);
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
 
-	background: linear-gradient(to bottom, $color-primary-dark, $color-accent);
-	box-shadow: 0 0 10px $color-accent, 0 0 20px $color-primary-dark;
-
-	opacity: 0.6;
-	animation: pulse 2s infinite alternate;
+	color: $color-accent;
+	font-size: 1.4em;
+	text-shadow: 0 0 6px rgba($color-accent,0.7),
+	             0 0 12px rgba($color-accent-dark,0.6);
+	background: transparent;
+	z-index: 1001;
 }
 
-/* Glowing pulse animation */
-@keyframes pulse {
-	from {
-		opacity: 0.4;
-		box-shadow: 0 0 8px $color-accent, 0 0 16px $color-primary-dark;
-	}
-
-	to {
-		opacity: 0.8;
-		box-shadow: 0 0 14px $color-accent, 0 0 28px $color-primary-dark;
-	}
+#sidebar-indicator::before {
+	content: "❯";
+	display: inline-block;
+	animation: sideBounce 1.5s infinite alternate ease-in-out;
 }
 
-/* ===========================
-   HOVER LOGIC
-   =========================== */
-#sidebar-trigger:hover~.sidebar,
+/* Arrow bounce animation */
+@keyframes sideBounce {
+	from { transform: translateX(-2px); }
+	to   { transform: translateX(4px); }
+}
+
+/* HOVER LOGIC */
+#sidebar-trigger:hover ~ .sidebar,
 .sidebar:hover {
 	left: 0;
-	/* slide in */
+}
+
+/* Hide arrow on hover */
+#sidebar-trigger:hover #sidebar-indicator,
+.sidebar:hover ~ #sidebar-trigger #sidebar-indicator {
+	opacity: 0;
+	animation: none;
 }
