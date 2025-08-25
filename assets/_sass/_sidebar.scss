@@ -20,6 +20,7 @@
 	justify-content: center;
 	align-items: center;
 
+	transition: left 0.3s ease-in-out;
 	z-index: 999;
 }
 
@@ -70,7 +71,7 @@
 	position: fixed;
 	top: 0;
 	left: 8px;
-	width: 32px;              /* wider to just be clickable, no line */
+	width: 32px;
 	height: 100%;
 	cursor: pointer;
 	background: transparent;
@@ -94,10 +95,12 @@
 
 	color: $color-accent;
 	font-size: 1.4em;
-	text-shadow: 0 0 6px rgba($color-accent,0.7),
-	             0 0 12px rgba($color-accent-dark,0.6);
+	text-shadow: 0 0 6px rgba($color-accent, 0.7),
+		0 0 12px rgba($color-accent-dark, 0.6);
 	background: transparent;
 	z-index: 1001;
+
+	transition: top 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 #sidebar-indicator::before {
@@ -108,19 +111,21 @@
 
 /* Arrow bounce animation */
 @keyframes sideBounce {
-	from { transform: translateX(-2px); }
-	to   { transform: translateX(4px); }
+	from {
+		transform: translateX(-5px);
+	}
+
+	to {
+		transform: translateX(5px);
+	}
 }
 
-/* HOVER LOGIC */
-#sidebar-trigger:hover ~ .sidebar,
+/* ===========================
+   HOVER / OPEN SIDEBAR
+   =========================== */
+#sidebar-trigger:hover~.sidebar,
 .sidebar:hover {
 	left: 0;
-}
-
-/* Hide arrow on hover */
-#sidebar-trigger:hover #sidebar-indicator,
-.sidebar:hover ~ #sidebar-trigger #sidebar-indicator {
-	opacity: 0;
-	animation: none;
+	border-right: 2px solid $color-accent;
+	box-shadow: inset -2px 0 5px rgba($color-accent, 0.2);
 }
