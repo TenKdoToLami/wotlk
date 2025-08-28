@@ -64,3 +64,16 @@ main section {
     justify-content: center;
 }
 
+
+/* ==========================================
+   HEX LIGHT BACKGROUND
+========================================== */
+#hexLightCanvas {
+  position: fixed;    /* stays in background on scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;        /* behind all content */
+  pointer-events: none;
+}
