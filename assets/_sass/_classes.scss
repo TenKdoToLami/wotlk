@@ -1,0 +1,85 @@
+// ...existing code...
+.tile {
+    position: relative;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    background: $color-bg-dark; // solid fallback
+    background-repeat: no-repeat;
+
+    .tile-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px; /* desired size */
+        height: 50px;
+        object-fit: contain;
+        z-index: 1; /* ABOVE the overlay pseudo but BELOW text */
+        pointer-events: none;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top,
+                rgba($color-bg-black, 0.8),
+                rgba($color-bg-black, 0.2));
+        z-index: 0; /* BELOW tile-bg */
+    }
+
+    .tile-content {
+        position: relative;
+        z-index: 2; /* Above everything */
+        padding: 20px;
+        text-align: center;
+        backdrop-filter: blur(3px);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        /* Tile heading */
+        h3 {
+            margin: 0.5em 0;
+            font-size: 1.5rem;
+            background: linear-gradient(90deg,
+                    rgba($color-text-light, 1) 0%,
+                    rgba($color-primary-bright, 1) 50%,
+                    rgba($color-primary, 1) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 2s linear infinite;
+        }
+
+        /* Tile description */
+        p {
+            margin: 0.5em 0;
+            font-size: 1rem;
+            background: linear-gradient(90deg,
+                    rgba($color-text-light, 0.5) 0%,
+                    rgba($color-primary-bright, 0.4) 50%,
+                    rgba($color-text-light, 0.3) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 3px rgba($color-primary, 0.3);
+            animation: shimmer 2s linear infinite;
+        }
+    }
+       &:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 12px 25px rgba($color-accent, 0.4);
+    }
+}
+// ...existing code...

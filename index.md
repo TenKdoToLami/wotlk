@@ -30,7 +30,6 @@ sections:
         desc: "Go to Page 2"
         url: "classes"
         img: "/assets/images/header-background.webp"
-
   - id: About
     content: |
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus ac leo pretium faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Donec iaculis gravida nulla. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Quisque porta. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Aliquam erat volutpat. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Maecenas aliquet accumsan leo. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.
