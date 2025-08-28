@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
 	const links = [];
 
 	sections.forEach(section => {
-		const title = section.id;
 		const li = document.createElement("li");
 		const link = document.createElement("a");
 
+		const displayName = section.dataset.displayName || section.id;
 		link.href = `#${section.id}`;
-		link.textContent = title;
+		link.textContent = displayName;
 
 		link.addEventListener("click", e => {
 			e.preventDefault();
@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		navList.appendChild(li);
 		links.push({ link, section });
 	});
+
 
 	// Function to update active link
 	function updateActiveLink() {

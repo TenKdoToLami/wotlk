@@ -9,6 +9,7 @@ header:
 header_image: assets/images/dde47b8f-67a0-411b-ad6d-e9b32e99eb3e.png
 sections:
   - id: Tiles
+    display_name: "Hub"
     include: tiles.html
     tiles:
       - title: "Classes"
@@ -32,6 +33,7 @@ sections:
         url: "classes"
         img: "/assets/images/header-background.webp"
   - id: About
+    display_name: "About"
     content: |
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus ac leo pretium faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Donec iaculis gravida nulla. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Quisque porta. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Aliquam erat volutpat. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Maecenas aliquet accumsan leo. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.
           Nunc tincidunt ante vitae massa. Aliquam id dolor. Suspendisse nisl. Curabitur vitae diam non enim vestibulum interdum. In dapibus augue non sapien. Maecenas libero. Integer tempor. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Morbi scelerisque luctus velit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Quisque porta. Aliquam ornare wisi eu metus. Curabitur vitae diam non enim vestibulum interdum. In enim a arcu imperdiet malesuada. Nullam rhoncus aliquam metus. Aliquam ante. Quisque porta.
