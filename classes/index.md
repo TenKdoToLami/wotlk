@@ -8,6 +8,7 @@ header:
     ### Eternal Slackers
 sections:
   - id: Classes
+    include: tiles.html
     tiles:
       - title: "Classes"
         desc: "How to play any relevant spec"
@@ -30,6 +31,7 @@ sections:
         url: "classes"
         img: "/assets/images/header-background.webp"
   - id: Tiles
+    include: tiles.html
     tiles:
       - title: "Classes"
         desc: "How to play any relevant spec"

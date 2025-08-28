@@ -18,7 +18,7 @@
     {% if page.header %}
     <section id="Header">
         {% if page.header_image %}
-        <div id="HeaderBackground" style="background-image: url('{{ page.header_image | relative_url }}');"></div>
+            <div id="HeaderBackground" style="background-image: url('{{ page.header_image | relative_url }}');"></div>
         {% endif %}
         <div class="HeaderContent">
             {{ page.header.content | markdownify }}
@@ -27,18 +27,18 @@
     {% endif %}
 
     <main>
-        {% if page.sections %}
         {% for section in page.sections %}
         <section id="{{ section.id }}">
-            {% if section.tiles %}
-                {% include tiles.html %}
+            {% if section.include %}
+                {% include {{ section.include }} %}
             {% else %}
                 {{ section.content | markdownify }}
             {% endif %}
         </section>
         {% endfor %}
-        {% endif %}
     </main>
+
+
 
     {% include footer.html %}
 </body>

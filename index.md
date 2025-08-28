@@ -9,6 +9,7 @@ header:
 header_image: assets/images/dde47b8f-67a0-411b-ad6d-e9b32e99eb3e.png
 sections:
   - id: Tiles
+    include: tiles.html
     tiles:
       - title: "Classes"
         desc: "How to play any relevant spec"
