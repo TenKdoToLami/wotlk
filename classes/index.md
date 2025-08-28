@@ -1,12 +1,12 @@
 ---
 layout: landing
 title: Eternal Slackers
+header:
+  content: |
+    # Classes
+    ## By Slacking Za
+    ### Eternal Slackers
 sections:
-  - id: Header
-    content: |
-      # Classes
-      ## By Slacking Za
-      ### Eternal Slackers
   - id: Classes
     tiles:
       - title: "Classes"

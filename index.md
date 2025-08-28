@@ -1,13 +1,13 @@
 ---
 layout: landing
 title: Eternal Slackers
-header_image: /assets/images/dde47b8f-67a0-411b-ad6d-e9b32e99eb3e.png
+header:
+  content: |
+    # Classes
+    ## By Slacking Za
+    ### Eternal Slackers
+header_image: assets/images/dde47b8f-67a0-411b-ad6d-e9b32e99eb3e.png
 sections:
-  - id: Header
-    content: |
-      # How to WoWMania
-      ## By Slacking Za
-      ### Eternal Slackers
   - id: Tiles
     tiles:
       - title: "Classes"

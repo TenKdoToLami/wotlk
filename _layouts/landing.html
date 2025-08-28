@@ -15,13 +15,13 @@
     {% include sidebar.html %}
     {% include section-navigation.html %}
 
-    {% assign start_index = 0 %}
-    {% if page.header_image and page.sections and page.sections.size > 0 %}
-    {% assign start_index = 1 %}
+    {% if page.header %}
     <section id="Header">
+        {% if page.header_image %}
         <div id="HeaderBackground" style="background-image: url('{{ page.header_image | relative_url }}');"></div>
+        {% endif %}
         <div class="HeaderContent">
-            {{ page.sections[0].content | markdownify }}
+            {{ page.header.content | markdownify }}
         </div>
     </section>
     {% endif %}
@@ -29,24 +29,19 @@
     <main>
         {% if page.sections %}
         {% for section in page.sections %}
-        {% if forloop.index0 >= start_index %}
         <section id="{{ section.id }}">
             {% if section.tiles %}
-            {% include tiles.html %}
+                {% include tiles.html %}
             {% else %}
-            {{ section.content | markdownify }}
+                {{ section.content | markdownify }}
             {% endif %}
         </section>
-        {% endif %}
         {% endfor %}
         {% endif %}
     </main>
 
-
-
-
-
     {% include footer.html %}
 </body>
+
 
 </html>
