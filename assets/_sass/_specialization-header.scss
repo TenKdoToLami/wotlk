@@ -1,0 +1,71 @@
+@import "theme-colors";
+
+.specialization {
+  text-align: center;
+  padding: 2rem;
+  color: $color-text-light;
+
+  .images {
+    img {
+      max-width: 200px;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 8px;
+    }
+  }
+
+  .spec-name {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    color: $color-text-white;
+    text-shadow: 0 0 10px $color-primary, 0 0 20px $color-primary-dark, 0 0 30px $color-primary-bright;
+  }
+
+  .author {
+    color: $color-text-muted;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .categories {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: left;
+
+    .category {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+
+      .label {
+        flex: 0 0 150px;
+        font-weight: bold;
+        color: $color-text-section;
+      }
+
+      .squares {
+        display: flex;
+        gap: 5px;
+
+        .square {
+          width: 25px;
+          height: 25px;
+          background: $color-bg-darker;
+          border-radius: 4px;
+          border: 1px solid $color-primary-dark;
+
+          &.filled {
+            background: linear-gradient(
+              90deg,
+              $color-primary,
+              $color-primary-bright,
+              $color-accent
+            );
+            box-shadow: 0 0 5px rgba($color-accent, 0.7);
+          }
+        }
+      }
+    }
+  }
+}
