@@ -13,7 +13,13 @@
     {% for cat in section.categories %}
     {% assign filled_boxes = cat.value | plus: 0 %}
     <div class="category">
-      <span class="label">{{ cat.label }}:</span>
+      <span class="label">{{ cat.label }}:
+        <span class="info-icon">i
+          <span class="tooltip">
+            {{ cat.description | default: "No description available" }}
+          </span>
+        </span>
+      </span>
       <div class="squares">
         {% for i in (1..5) %}
         <span class="square {% if i <= filled_boxes %}filled{% endif %}"></span>

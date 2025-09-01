@@ -12,18 +12,25 @@ sections:
     categories:
       - label: Difficulty
         value: 3
+        description: "How challenging it is to learn and play its primary rotation effectively."
       - label: Skill Ceiling
         value: 2
+        description: "How much there is to master beyond the primary rotation to play it at its highest potential."
       - label: Mobility
         value: 0
+        description: "How easily the class can move or reposition during combat (e.g.: movement speed buffs)."
       - label: Gear Dependence
         value: 5
+        description: "How much top-tier gear affects the class's performance, higher values mean gear heavily impacts effectiveness."
       - label: Damage Output
         value: 3
+        description: "The overall damage the specialization can deal over time on a single target, including raid buffs."
       - label: Survivability
         value: 5
-      - label: Raid utility
+        description: "The ability to withstand damage and avoid dying, includes self-heals and defensive tools."
+      - label: Raid Utility
         value: 4
+        description: "The support this class provides to the group, such as buffs, debuffs, crowd control, or unique mechanics."
   - id: About
     display_name: "About"
     content: |
