@@ -1,23 +1,25 @@
 <section class="specialization">
-  <div class="images">
-    <img src="{{ section.crest | relative_url }}" alt="Spec Crest" class="crest">
-    <img src="{{ section.spec_image | relative_url }}" alt="{{ section.name }}" class="spec-image">
-  </div>
+  <div class="heading">
+    <div class="images">
+      <img src="{{ section.crest | relative_url }}" alt="Spec Crest" class="crest">
+      <img src="{{ section.spec_image | relative_url }}" alt="{{ section.name }}" class="spec-image">
+    </div>
 
-  <h1 class="spec-name">{{ section.name }}</h1>
-  <p class="author">by {{ section.author }}</p>
+    <h1 class="spec-name">{{ section.name }}</h1>
+    <p class="author">by {{ section.author }}</p>
+  </div>
 
   <div class="categories">
     {% for cat in section.categories %}
-      {% assign filled_boxes = cat.value | plus: 0 %}
-      <div class="category">
-        <span class="label">{{ cat.label }}:</span>
-        <div class="squares">
-          {% for i in (1..5) %}
-            <span class="square {% if i <= filled_boxes %}filled{% endif %}"></span>
-          {% endfor %}
-        </div>
+    {% assign filled_boxes = cat.value | plus: 0 %}
+    <div class="category">
+      <span class="label">{{ cat.label }}:</span>
+      <div class="squares">
+        {% for i in (1..5) %}
+        <span class="square {% if i <= filled_boxes %}filled{% endif %}"></span>
+        {% endfor %}
       </div>
+    </div>
     {% endfor %}
   </div>
 </section>
