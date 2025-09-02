@@ -35,8 +35,27 @@ sections:
     display_name: "Description"
     include: specialization-description.html
     content: |
-      This specialization excels in applying damage over time effects
-      and has a unique playstyle that rewards patience and planning.
+      At its heart, the Shadow Priest is a Damage-over-Time (DoT) class. Your primary objective is to keep your key DoTs: Shadow Word: Pain, Vampiric Touch, and Devouring Plague active on your target at all times. The rest of your time is spent filling the gaps with direct damage spells like Mind Blast and Mind Flay.
+
+      <a href="https://www.wowhead.com/wotlk/spell=48125"
+         class="wow-icon-tooltip"
+         data-wowhead="spell=48125"
+         style="
+           background-image: url('https://wow.zamimg.com/images/wow/icons/tiny/spell_shadow_shadowwordpain.gif');
+           background-repeat: no-repeat;
+           background-position: left center;
+           padding-left: 20px;
+           text-decoration: inherit;   /* inherit normal text style */
+           color: inherit;             /* inherit text color from section */
+           font-size: inherit;
+           line-height: 1.6;">
+        Shadow Word: Pain
+      </a>
+
+
+      This playstyle rewards careful timing and a deep understanding of the fight. Maximizing your damage is all about knowing when to refresh your DoTs to maintain constant uptime.
+
+      Shadow Priests scale exceptionally well with gear, particularly with Haste. As you acquire better equipment, your rotation speeds up, allowing you to cast more spells and get more damage out of your DoTs. This scaling ensures that you become a powerful contender as you progress toward end-game content.
     pros:
       - Strong sustained damage
       - Excellent survivability
