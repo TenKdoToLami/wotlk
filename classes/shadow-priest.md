@@ -45,6 +45,9 @@ sections:
       - Weak burst damage
       - Low mobility
       - High gear dependence
+      - High gear dependence
+      - High gear dependence
+      - High gear dependence
   - id: sadas
     display_name: "About"
     content: |
