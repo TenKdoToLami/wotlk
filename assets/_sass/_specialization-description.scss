@@ -6,12 +6,12 @@
   padding: 2rem;
 
   .note-box {
-    background: rgba(0, 0, 0, 0.7); // blackish overlay
-    backdrop-filter: blur(10px);    // frosted glass effect
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 2rem;
-    max-width: 900px;
     width: 100%;
+    max-width: none;
     color: $color-text-light;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 
@@ -49,13 +49,21 @@
       }
 
       .pros {
-        h3 { color: #4caf50; } // green
-        li { border-left: 4px solid #4caf50; }
+        h3 {
+          color: #4caf50;
+        }
+        li {
+          border-left: 4px solid #4caf50;
+        }
       }
 
       .cons {
-        h3 { color: #f44336; } // red
-        li { border-left: 4px solid #f44336; }
+        h3 {
+          color: #f44336;
+        }
+        li {
+          border-left: 4px solid #f44336;
+        }
       }
     }
   }

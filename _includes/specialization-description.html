@@ -1,29 +1,27 @@
 <section class="specialization-description">
-  <div class="note-box">
-    <!-- Description from .md -->
-    <div class="description">
-      {{ section.content | markdownify }}
-    </div>
+	<div class="note-box">
+		<div class="description">
+			{{ section.content | markdownify }}
+		</div>
 
-    <!-- Pros & Cons layout -->
-    <div class="pros-cons">
-      <div class="pros">
-        <h3>Pros</h3>
-        <ul>
-          {% for item in section.pros %}
-            <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-      </div>
+		<div class="pros-cons">
+			<div class="pros">
+				<h3>Pros</h3>
+				<ul>
+					{% for item in section.pros %}
+					<li>{{ item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
 
-      <div class="cons">
-        <h3>Cons</h3>
-        <ul>
-          {% for item in section.cons %}
-            <li>{{ item }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </div>
+			<div class="cons">
+				<h3>Cons</h3>
+				<ul>
+					{% for item in section.cons %}
+					<li>{{ item }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
 </section>
