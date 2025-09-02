@@ -31,7 +31,21 @@ sections:
       - label: Raid Utility
         value: 4
         description: "The support this class provides to the group, such as buffs, debuffs, crowd control, or unique mechanics."
-  - id: About
+  - id: specialization-description
+    display_name: "Description"
+    include: specialization-description.html
+    content: |
+      This specialization excels in applying damage over time effects
+      and has a unique playstyle that rewards patience and planning.
+    pros:
+      - Strong sustained damage
+      - Excellent survivability
+      - High raid utility
+    cons:
+      - Weak burst damage
+      - Low mobility
+      - High gear dependence
+  - id: sadas
     display_name: "About"
     content: |
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Vivamus ac leo pretium faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Donec iaculis gravida nulla. Sed vel lectus. Donec odio tempus molestie, porttitor ut, iaculis quis, sem. Quisque porta. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis. Aliquam erat volutpat. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Maecenas aliquet accumsan leo. Morbi leo mi, nonummy eget tristique non, rhoncus non leo.
