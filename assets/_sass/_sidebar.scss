@@ -45,7 +45,7 @@
 .sidebar a {
 	color: $color-text-white;
 	text-decoration: none;
-	font-size: 1.2em;
+	font-size: $font-size-h6;
 	display: block;
 	padding: 10px;
 	border-radius: 6px;
@@ -94,7 +94,7 @@
 	cursor: pointer;
 
 	color: $color-accent;
-	font-size: 1.4em;
+	font-size: $font-size-h5;
 	text-shadow: 0 0 6px rgba($color-accent, 0.7),
 		0 0 12px rgba($color-accent-dark, 0.6);
 	background: transparent;

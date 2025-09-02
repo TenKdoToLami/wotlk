@@ -1,5 +1,5 @@
 /* ===============================
-   THEME COLORS - MAIN THEM
+   THEME COLORS - MAIN THEME
    =============================== */
 
 $color-bg-dark: #1a1a2e;
@@ -22,21 +22,49 @@ $color-accent-dark: #0099ff;
 /* ===============================
    THEME COLORS - DERIVED
    =============================== */
+/* Footer */
 $color-footer-bg: rgba($color-bg-black, 0.0);
 $color-footer-text: $color-primary;
 $color-footer-text-muted: $color-primary-dark;
 
+/* Section Navigation */
 $color-section-nav-bg: rgba($color-bg-black, 0.15);
 $color-section-nav-text: $color-text-light;
 $color-section-nav-active-bg: rgba($color-bg-black, 0.25);
 
+/* Sidebar */
 $color-sidebar-bg: rgba($color-bg-black, 0.2);
 $color-sidebar-border: rgba($color-accent, 0.3);
 $color-sidebar-shadow: rgba($color-accent, 0.2);
+
 $color-sidebar-link: $color-text-white;
 $color-sidebar-link-hover: $color-accent-alt;
 $color-sidebar-link-hover-shadow: $color-accent-dark;
 $color-sidebar-link-active: $color-accent;
 $color-sidebar-link-active-shadow: $color-accent-dark;
+
 $color-sidebar-indicator-gradient-start: $color-primary-dark;
 $color-sidebar-indicator-gradient-end: $color-accent;
+
+/* Shadows / Effects */
+$color-shadow-strong: rgba($color-bg-black, 0.9);
+$color-shadow-medium: rgba($color-bg-black, 0.8);
+$color-shadow-light: rgba($color-primary-dark, 0.2);
+$color-surface-overlay: rgba($color-text-white, 0.05);
+
+
+/* ===============================
+   THEME TYPOGRAPHY
+   =============================== */
+$font-size-h1: 3.8rem;
+$font-size-h2: 2.2rem;
+$font-size-h3: 2rem;
+$font-size-h4: 1.6rem;
+$font-size-h5: 1.4rem;
+$font-size-h6: 1.2rem;
+$font-size-body: 1rem;
+$font-size-body2: 0.9rem;
+$font-size-small: 0.8rem;
+
+$font-weight-bold: 700;
+$font-weight-light: 300;

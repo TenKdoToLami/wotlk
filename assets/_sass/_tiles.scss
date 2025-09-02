@@ -68,7 +68,7 @@
 			/* Tile heading */
 			h3 {
 				margin: 0.5em 0;
-				font-size: 1.5rem;
+				font-size: $font-size-h4;
 				background: linear-gradient(90deg,
 						rgba($color-text-light, 1) 0%,
 						rgba($color-primary-bright, 1) 50%,
@@ -82,7 +82,7 @@
 			/* Tile description */
 			p {
 				margin: 0.5em 0;
-				font-size: 1rem;
+				font-size: $font-size-body;
 				background: linear-gradient(90deg,
 						rgba($color-text-light, 0.5) 0%,
 						rgba($color-primary-bright, 0.4) 50%,
