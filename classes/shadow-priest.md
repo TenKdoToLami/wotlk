@@ -57,15 +57,17 @@ sections:
 
       Shadow Priests scale exceptionally well with gear, particularly with Haste. As you acquire better equipment, your rotation speeds up, allowing you to cast more spells and get more damage out of your DoTs. This scaling ensures that you become a powerful contender as you progress toward end-game content.
     pros:
-      - Strong sustained damage
+      - Consistent damage
+      - Powerful AOE
+      - Can bypass several mechanics
       - Excellent survivability
       - High raid utility
+      - Low threat generation
+      - Mana efficient
     cons:
-      - Weak burst damage
+      - Ramp-up time
+      - Lack of offensive cooldowns
       - Low mobility
-      - High gear dependence
-      - High gear dependence
-      - High gear dependence
       - High gear dependence
   - id: sadas
     display_name: "About"
